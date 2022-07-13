@@ -15,7 +15,9 @@ import WorkOutlinedIcon from "@material-ui/icons/WorkOutlined";
 import MeetingRoomIcon from "@material-ui/icons/MeetingRoom";
 import CastForEducationIcon from "@material-ui/icons/CastForEducation";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
-import CreateIcon from "@material-ui/icons/Create";
+import ClearIcon from "@material-ui/icons/Clear";
+import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
+import { Link } from "react-router-dom";
 function Photos() {
   return (
     <div className="blog">
@@ -165,7 +167,7 @@ function Photos() {
                 </div>
               </div>
               <button className="desc2">Visit Website</button>
-            </div>{" "}
+            </div>
             <div className="second2">
               <div className="heading2">
                 <img src={profile} alt="" className="profile" />
@@ -239,13 +241,49 @@ function Photos() {
         </div>
       </div>
       <div className="sideBar">
-        <div className="head">
-          <LocationOnOutlinedIcon /> Noida, India{" "}
-          <CreateIcon className="create" />
+        <div className="head" style={{ color: "#808080" }}>
+          <LocationOnOutlinedIcon /> Enter your location
+          <ClearIcon className="create" />
         </div>
         <div className="para">
           <InfoOutlinedIcon className="info" /> Loremas ipsum dolor sit amet
           consectetur adipisicing elit. Molestiae
+        </div>
+        <div className="recco">
+          <ThumbUpAltOutlinedIcon />
+          Recommended Groups
+        </div>
+        <div className="friends">
+          <div className="f1">
+            <img src={profile} alt="" className="frpro" /> Ayesha Khan
+          </div>
+          <Link to="/followed">
+            <button className="f2">Follow</button>
+          </Link>
+        </div>
+        <div className="friends">
+          <div className="f1">
+            <img src={profile} alt="" className="frpro" /> Ayesha Khan
+          </div>
+          <button className="f2">Follow</button>
+        </div>
+        <div className="friends">
+          <div className="f1">
+            <img src={profile} alt="" className="frpro" /> Ayesha Khan
+          </div>
+          <button className="f2">Follow</button>
+        </div>
+        <div className="friends">
+          <div className="f1">
+            <img src={profile} alt="" className="frpro" /> Ayesha Khan
+          </div>
+          <button className="f2">Follow</button>
+        </div>
+        <div className="friends">
+          <div className="f1">
+            <img src={profile} alt="" className="frpro" /> Ayesha Khan
+          </div>
+          <button className="f2">Follow</button>
         </div>
       </div>
     </div>

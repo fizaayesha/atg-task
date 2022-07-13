@@ -1,18 +1,20 @@
 import React from "react";
-import Middle from "./Components/Middle";
-import NavBar from "./Components/NavBar";
 import "./App.css";
-import Third from "./Components/Third";
-import Photos from "./Components/Photos";
-// import Posts from "./Components/Posts";
+import NotLogin from "./pages/NotLogin";
+import AfterLogin from "./pages/AfterLogin";
+import Followed from "./pages/Followed";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Middle />
-      <Third/>
-      {/* <Posts/> */}
-      <Photos/>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={NotLogin} />
+          <Route path="/join" exact component={AfterLogin} />
+          <Route path="/followed" exact component={Followed} />
+        </Switch>
+      </Router>
     </div>
   );
 }

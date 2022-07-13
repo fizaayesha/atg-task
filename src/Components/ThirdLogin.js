@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { ArrowDropDown } from "@material-ui/icons";
-import GroupIcon from "@material-ui/icons/Group";
-import { Link } from "react-router-dom";
-function Third() {
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+function ThirdLogin() {
   return (
     <ThirdStyled>
       <div className="topbar">
@@ -21,11 +20,9 @@ function Third() {
             <button className="button1">
               Write a Post <ArrowDropDown />
             </button>
-            <Link to="/join">
-              <button className="button2">
-                <GroupIcon /> Join Group
-              </button>
-            </Link>
+            <button className="button2">
+              <ExitToAppIcon /> Leave Group
+            </button>
           </div>
         </div>
       </div>
@@ -43,6 +40,7 @@ const ThirdStyled = styled.div`
     column-gap: 27rem;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid #e0e0e0;
+    margin-top:50px;
     .left {
       font-size: 1.9rem;
       font-weight: bolder;
@@ -87,14 +85,16 @@ const ThirdStyled = styled.div`
         .button2 {
           border: none;
           outline: none;
-          background: #2f6ce5;
+          background: #ffffff;
           border-radius: 4px;
           font-size: 12px;
           color: white;
           font-weight: bold;
+          border: 1px solid #989899;
+          color:#989899;
         }
       }
     }
   }
 `;
-export default Third;
+export default ThirdLogin;
