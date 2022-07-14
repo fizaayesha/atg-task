@@ -14,7 +14,7 @@ function Register() {
           engineering. Sign up now 🤘🏼
         </p>
       </div>
-      <div className="sign">Sign In</div>
+      <div className="sign">Create Account</div>
       <div className="mid">
         Already have an Account
         <Link to="login">
