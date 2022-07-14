@@ -43,7 +43,7 @@ function Login() {
 
 const LoginStyled = styled.div`
   width: 50%;
-  padding-bottom:10px;
+  padding-bottom: 10px;
   left: 25%;
   position: fixed;
   background-color: #ffffff;
@@ -104,6 +104,10 @@ const LoginStyled = styled.div`
       outline: none;
       border: none;
       border: 1px solid #d9d9db;
+      @media screen and (max-width: 800px) {
+        width: 140px;
+        height: 20px;
+      }
     }
     button {
       position: absolute;
@@ -116,6 +120,12 @@ const LoginStyled = styled.div`
       margin-top: 39px;
       border: none;
       outline: none;
+      @media screen and (max-width: 800px) {
+        width: 140px;
+        height: 20px;
+        margin-left: -7rem;
+        margin-top: 9px;
+      }
     }
   }
   .fill1 {
@@ -143,12 +153,18 @@ const LoginStyled = styled.div`
       border: none;
       margin-top: 10px;
     }
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   }
   .svg {
     .svgg {
       height: 34vh;
       margin-top: -20rem;
       margin-left: 20rem;
+    }
+    @media screen and (max-width: 800px) {
+      display: none;
     }
   }
 `;

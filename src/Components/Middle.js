@@ -2,12 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import bgLogo from "../Assets/atgback.jfif";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import { Link } from "react-router-dom";
 function Middle() {
   return (
     <MiddleStyled>
       <img src={bgLogo} alt="" className="backImage" />
       <ArrowBackIcon htmlColor="white" className="arrow" />
-      <button className="join">Join Group</button>
+      <Link to="/join">
+        <button className="join">Join Group</button>
+      </Link>
       <div className="texts">
         <div className="text1">Computer Engineering</div>
         <div className="text2">142,454Computer Engineers follow us</div>

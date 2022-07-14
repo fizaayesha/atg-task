@@ -33,7 +33,7 @@ function Register() {
         <button>Submit</button>
       </div>
       <div className="fill1">
-        <button className="name1"> 
+        <button className="name1">
           <Facebook htmlColor="blue" /> Sign up with facebook{" "}
         </button>
         <button className="name1">
@@ -113,6 +113,10 @@ const RegisterStyled = styled.div`
       outline: none;
       border: none;
       border: 1px solid #d9d9db;
+      @media screen and (max-width: 800px) {
+        width: 140px;
+        height: 20px;
+      }
     }
     button {
       position: absolute;
@@ -125,6 +129,12 @@ const RegisterStyled = styled.div`
       margin-top: 39px;
       border: none;
       outline: none;
+      @media screen and (max-width: 800px) {
+      margin-left: -7rem;
+      margin-top: 3px;
+        width: 140px;
+        height: 20px;
+      }
     }
   }
   .fill1 {
@@ -140,6 +150,10 @@ const RegisterStyled = styled.div`
       border: none;
       border: 1px solid #d9d9db;
       margin-top: 10px;
+      @media screen and (max-width: 800px) {
+        width: 140px;
+        height: 20px;
+      }
     }
     .name2 {
       box-sizing: border-box;
@@ -151,6 +165,10 @@ const RegisterStyled = styled.div`
       outline: none;
       border: none;
       margin-top: 10px;
+      @media screen and (max-width: 800px) {
+        width: 140px;
+        height: 20px;
+      }
     }
   }
   .svg {
@@ -162,6 +180,9 @@ const RegisterStyled = styled.div`
     h6 {
       font-size: 12px;
       margin-left: 24rem;
+    }
+    @media screen and (max-width: 800px) {
+      display: none;
     }
   }
 `;

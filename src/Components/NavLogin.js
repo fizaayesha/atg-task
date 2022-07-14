@@ -39,15 +39,15 @@ const NavBarStyled = styled.div`
     background-color: rgb(255, 255, 255);
     border: 1px solid #efefef;
     position: fixed;
+    @media screen and (max-width: 925px) {
+      display: none;
+    }
     .left {
       font-size: 1.9rem;
       margin-right: 20%;
       font-weight: bolder;
-      @media (max-width: 790px) and (min-width: 595px) {
-        margin-right: 4%;
-      }
-      @media screen and (max-width: 596px) {
-        font-size: 1.2rem;
+      @media (max-width: 1050px) {
+        margin-right: 10%;
       }
       .logo {
         margin-left: 10px;
