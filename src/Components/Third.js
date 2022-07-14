@@ -28,6 +28,14 @@ function Third() {
             </Link>
           </div>
         </div>
+        <div className="main">
+          <div className="posts23">Posts(343)</div>
+          <div className="filter"></div>
+          <button>
+            Filter All
+            <ArrowDropDown />{" "}
+          </button>
+        </div>
       </div>
     </ThirdStyled>
   );
@@ -40,20 +48,16 @@ const ThirdStyled = styled.div`
     align-items: center;
     justify-content: center;
     height: 4em;
-    column-gap: 27rem;
+    column-gap: 24rem;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid #e0e0e0;
+    @media screen and (max-width: 1200px) {
+      column-gap: 12rem;
+    }
     .left {
       font-size: 1.9rem;
       font-weight: bolder;
-      /* @media (max-width: 790px) and (min-width: 595px) {
-        margin-right: 4%;
-      }
-      @media screen and (max-width: 596px) {
-        font-size: 1.2rem;
-      } */
       ul {
-        /* left: 200px; */
         margin-top: 22px;
         display: inline-flex;
         li {
@@ -71,8 +75,12 @@ const ThirdStyled = styled.div`
           color: black;
         }
       }
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
     }
     .right {
+      margin-left: -2rem;
       .buttons {
         margin-top: 15px;
         display: flex;
@@ -83,9 +91,13 @@ const ThirdStyled = styled.div`
           border-radius: 4px;
           font-size: 12px;
           font-weight: bold;
+          width: 7rem;
+          height: 2rem;
         }
         .button2 {
           border: none;
+          width: 7rem;
+          height: 2rem;
           outline: none;
           background: #2f6ce5;
           border-radius: 4px;
@@ -93,6 +105,34 @@ const ThirdStyled = styled.div`
           color: white;
           font-weight: bold;
         }
+      }
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+    .main {
+      display: inline-flex;
+      column-gap: 10rem;
+
+      @media screen and (max-width: 620px) {
+        column-gap: 6rem;
+      }
+      @media screen and (max-width: 455px) {
+        column-gap: 3rem;
+      }
+      .posts23 {
+      }
+      button {
+        color: black;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        padding: 4px;
+        background-color: #f1f3f5;
+        font-size: 15px;
+      }
+      @media screen and (min-width: 801px) {
+        display: none;
       }
     }
   }

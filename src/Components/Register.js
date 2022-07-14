@@ -4,9 +4,10 @@ import styled from "styled-components";
 import GTranslateIcon from "@material-ui/icons/GTranslate";
 import svg from "../Assets/13038.jpg";
 import { Link } from "react-router-dom";
-function Login() {
+
+function Register() {
   return (
-    <LoginStyled>
+    <RegisterStyled>
       <div className="header">
         <p>
           Let's learn, share & inspire each other with our passion for computer
@@ -15,35 +16,42 @@ function Login() {
       </div>
       <div className="sign">Sign In</div>
       <div className="mid">
-        Do you have account?
-        <Link to="/register">
-          <span style={{ color: "blue" }}>Create new for free?</span>{" "}
+        Already have an Account
+        <Link to="login">
+          <span style={{ color: "blue" }}>Sign In</span>{" "}
         </Link>
       </div>
       <div className="fill">
-        <input type="text" className="name" placeholder="Enter your name" />
-        <input type="text" className="name" placeholder="Enter yout password" />
+        <input
+          type="text"
+          className="name"
+          placeholder="First Name           |Last Name"
+        />
+        <input type="text" className="name" placeholder="Email" />
+        <input type="text" className="name" placeholder="Password" />
+        <input type="text" className="name" placeholder="Confirm Password" />
         <button>Submit</button>
       </div>
       <div className="fill1">
-        <button className="name1">
-          <Facebook htmlColor="blue" /> Sign In with facebook{" "}
+        <button className="name1"> 
+          <Facebook htmlColor="blue" /> Sign up with facebook{" "}
         </button>
         <button className="name1">
-          <GTranslateIcon htmlColor="red" /> Sign In with Google{" "}
+          <GTranslateIcon htmlColor="red" /> Sign up with Google{" "}
         </button>
-        <button className="name2">Forgot Password?</button>
       </div>
       <div className="svg">
         <img src={svg} alt="" className="svgg" />
+        <h6>
+          By signing up, you agree to our Terms & conditions, Privacy policy
+        </h6>
       </div>
-    </LoginStyled>
+    </RegisterStyled>
   );
 }
 
-const LoginStyled = styled.div`
+const RegisterStyled = styled.div`
   width: 50%;
-  padding-bottom:10px;
   left: 25%;
   position: fixed;
   background-color: #ffffff;
@@ -53,6 +61,7 @@ const LoginStyled = styled.div`
   position: fixed;
   font-family: "IBM Plex Sans";
   font-style: normal;
+  padding-bottom: 10px;
   .header {
     position: absolute;
     width: 100%;
@@ -150,6 +159,10 @@ const LoginStyled = styled.div`
       margin-top: -20rem;
       margin-left: 20rem;
     }
+    h6 {
+      font-size: 12px;
+      margin-left: 24rem;
+    }
   }
 `;
-export default Login;
+export default Register;

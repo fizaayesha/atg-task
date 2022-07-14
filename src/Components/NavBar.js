@@ -3,6 +3,7 @@ import styled from "styled-components";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
 import logo from "../Assets/atglogo.png";
 import { ArrowDropDown } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <NavBarStyled>
@@ -23,10 +24,12 @@ function NavBar() {
             <p>
               Create Account.{" "}
               <sub>
-                <span>
-                  It's free
-                  <ArrowDropDown />
-                </span>
+                <Link to="/login">
+                  <span>
+                    It's free
+                    <ArrowDropDown />
+                  </span>
+                </Link>
               </sub>
             </p>
           </div>
@@ -46,15 +49,15 @@ const NavBarStyled = styled.div`
     background-color: rgb(255, 255, 255);
     border: 1px solid #efefef;
     position: fixed;
+    @media screen and (max-width: 925px) {
+      display: none;
+    }
     .left {
       font-size: 1.9rem;
       margin-right: 20%;
       font-weight: bolder;
-      @media (max-width: 790px) and (min-width: 595px) {
-        margin-right: 4%;
-      }
-      @media screen and (max-width: 596px) {
-        font-size: 1.2rem;
+      @media (max-width: 1050px) {
+        margin-right: 10%;
       }
       .logo {
         margin-left: 10px;
